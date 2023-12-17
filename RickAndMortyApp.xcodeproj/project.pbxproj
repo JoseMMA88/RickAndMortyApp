@@ -22,8 +22,6 @@
 		1484AE142B2F5AF0009D5EBB /* EpisodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1484AE132B2F5AF0009D5EBB /* EpisodeViewController.swift */; };
 		1484AE162B2F5B07009D5EBB /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1484AE152B2F5B07009D5EBB /* LocationViewController.swift */; };
 		1484AE182B2F5B1F009D5EBB /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1484AE172B2F5B1F009D5EBB /* SettingsViewController.swift */; };
-		1484AE1A2B2F6482009D5EBB /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 1484AE192B2F6482009D5EBB /* README.md */; };
-		1484AE1C2B2F6768009D5EBB /* .gitignore.md in Resources */ = {isa = PBXBuildFile; fileRef = 1484AE1B2B2F6768009D5EBB /* .gitignore.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,8 +61,6 @@
 		1484AE132B2F5AF0009D5EBB /* EpisodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeViewController.swift; sourceTree = "<group>"; };
 		1484AE152B2F5B07009D5EBB /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
 		1484AE172B2F5B1F009D5EBB /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
-		1484AE192B2F6482009D5EBB /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		1484AE1B2B2F6768009D5EBB /* .gitignore.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = .gitignore.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,8 +119,6 @@
 				1484AE032B2F58DF009D5EBB /* Models */,
 				1484AE022B2F58CA009D5EBB /* Controllers */,
 				1484ADE02B2F527E009D5EBB /* Info.plist */,
-				1484AE192B2F6482009D5EBB /* README.md */,
-				1484AE1B2B2F6768009D5EBB /* .gitignore.md */,
 			);
 			path = RickAndMortyApp;
 			sourceTree = "<group>";
@@ -319,9 +313,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1484AE1A2B2F6482009D5EBB /* README.md in Resources */,
 				1484ADDF2B2F527E009D5EBB /* LaunchScreen.storyboard in Resources */,
-				1484AE1C2B2F6768009D5EBB /* .gitignore.md in Resources */,
 				1484ADDC2B2F527E009D5EBB /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
