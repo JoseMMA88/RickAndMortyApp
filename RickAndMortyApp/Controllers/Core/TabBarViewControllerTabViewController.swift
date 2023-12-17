@@ -7,6 +7,7 @@
 
 import UIKit
 
+/// Main app class for general navigation
 final class TabBarViewController: UITabBarController {
 
     override func viewDidLoad() {
@@ -16,6 +17,7 @@ final class TabBarViewController: UITabBarController {
         setUpTabs()
     }
     
+    /// Set up tabs options
     private func setUpTabs() {
         
         let charactersVC = CharacterViewController()

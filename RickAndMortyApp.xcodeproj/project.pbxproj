@@ -22,6 +22,9 @@
 		1484AE142B2F5AF0009D5EBB /* EpisodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1484AE132B2F5AF0009D5EBB /* EpisodeViewController.swift */; };
 		1484AE162B2F5B07009D5EBB /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1484AE152B2F5B07009D5EBB /* LocationViewController.swift */; };
 		1484AE182B2F5B1F009D5EBB /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1484AE172B2F5B1F009D5EBB /* SettingsViewController.swift */; };
+		1484AE1E2B2F6DB9009D5EBB /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1484AE1D2B2F6DB9009D5EBB /* APIService.swift */; };
+		1484AE202B2F6DCC009D5EBB /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1484AE1F2B2F6DCC009D5EBB /* APIRequest.swift */; };
+		1484AE222B2F6E7F009D5EBB /* APIEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1484AE212B2F6E7F009D5EBB /* APIEndPoint.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +64,9 @@
 		1484AE132B2F5AF0009D5EBB /* EpisodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeViewController.swift; sourceTree = "<group>"; };
 		1484AE152B2F5B07009D5EBB /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
 		1484AE172B2F5B1F009D5EBB /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		1484AE1D2B2F6DB9009D5EBB /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		1484AE1F2B2F6DCC009D5EBB /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
+		1484AE212B2F6E7F009D5EBB /* APIEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndPoint.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,6 +188,9 @@
 		1484AE072B2F590F009D5EBB /* APIClient */ = {
 			isa = PBXGroup;
 			children = (
+				1484AE1D2B2F6DB9009D5EBB /* APIService.swift */,
+				1484AE1F2B2F6DCC009D5EBB /* APIRequest.swift */,
+				1484AE212B2F6E7F009D5EBB /* APIEndPoint.swift */,
 			);
 			path = APIClient;
 			sourceTree = "<group>";
@@ -343,11 +352,14 @@
 				1484AE0E2B2F59FB009D5EBB /* Episode.swift in Sources */,
 				1484AE122B2F5AE3009D5EBB /* CharacterViewController.swift in Sources */,
 				1484AE182B2F5B1F009D5EBB /* SettingsViewController.swift in Sources */,
+				1484AE1E2B2F6DB9009D5EBB /* APIService.swift in Sources */,
+				1484AE222B2F6E7F009D5EBB /* APIEndPoint.swift in Sources */,
 				1484ADD32B2F527D009D5EBB /* AppDelegate.swift in Sources */,
 				1484AE0C2B2F59D6009D5EBB /* Location.swift in Sources */,
 				1484ADD52B2F527D009D5EBB /* SceneDelegate.swift in Sources */,
 				1484AE162B2F5B07009D5EBB /* LocationViewController.swift in Sources */,
 				1484AE142B2F5AF0009D5EBB /* EpisodeViewController.swift in Sources */,
+				1484AE202B2F6DCC009D5EBB /* APIRequest.swift in Sources */,
 				1484AE0A2B2F59C6009D5EBB /* Character.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
