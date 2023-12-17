@@ -2,13 +2,6 @@
 
 Introducing "RickAndMortyApp" your ultimate companion app for exploring the multiverse of the hit TV series, Rick and Morty. Immerse yourself in the chaotic and hilarious world of Rick Sanchez and his grandson Morty Smith with this intuitive application that seamlessly pulls data from the official API at https://rickandmortyapi.com.
 
-[![NPM Version][npm-image]][npm-url]
-[![Build Status][travis-image]][travis-url]
-
-One to two paragraph statement about your product and what it does.
-
-![](header.png)
-
 ## Installation
 
 OS X & Linux:
