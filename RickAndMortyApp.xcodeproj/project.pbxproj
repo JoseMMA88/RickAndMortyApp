@@ -25,6 +25,8 @@
 		1484AE1E2B2F6DB9009D5EBB /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1484AE1D2B2F6DB9009D5EBB /* APIService.swift */; };
 		1484AE202B2F6DCC009D5EBB /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1484AE1F2B2F6DCC009D5EBB /* APIRequest.swift */; };
 		1484AE222B2F6E7F009D5EBB /* APIEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1484AE212B2F6E7F009D5EBB /* APIEndPoint.swift */; };
+		1484AE242B306559009D5EBB /* Origin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1484AE232B306559009D5EBB /* Origin.swift */; };
+		1484AE262B306661009D5EBB /* SingleLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1484AE252B306661009D5EBB /* SingleLocation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +69,8 @@
 		1484AE1D2B2F6DB9009D5EBB /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		1484AE1F2B2F6DCC009D5EBB /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
 		1484AE212B2F6E7F009D5EBB /* APIEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndPoint.swift; sourceTree = "<group>"; };
+		1484AE232B306559009D5EBB /* Origin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Origin.swift; sourceTree = "<group>"; };
+		1484AE252B306661009D5EBB /* SingleLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleLocation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +164,8 @@
 				1484AE092B2F59C6009D5EBB /* Character.swift */,
 				1484AE0B2B2F59D6009D5EBB /* Location.swift */,
 				1484AE0D2B2F59FB009D5EBB /* Episode.swift */,
+				1484AE232B306559009D5EBB /* Origin.swift */,
+				1484AE252B306661009D5EBB /* SingleLocation.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -361,6 +367,8 @@
 				1484AE142B2F5AF0009D5EBB /* EpisodeViewController.swift in Sources */,
 				1484AE202B2F6DCC009D5EBB /* APIRequest.swift in Sources */,
 				1484AE0A2B2F59C6009D5EBB /* Character.swift in Sources */,
+				1484AE242B306559009D5EBB /* Origin.swift in Sources */,
+				1484AE262B306661009D5EBB /* SingleLocation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
