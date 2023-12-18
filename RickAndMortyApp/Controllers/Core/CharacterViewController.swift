@@ -14,6 +14,17 @@ final class CharacterViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .white
         title = "Characters"
+        
+        let request = APIRequest(endPoint: .character)
+        
+        APIService.share.execute(request, expecting: GetAllCharactersResponse.self) { result in
+            switch result {
+            case .success(let model):
+                print(String(describing: model))
+            case .failure(let error):
+                print(String(describing: error))
+            }
+        }
     }
 
 }

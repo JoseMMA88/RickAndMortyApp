@@ -27,6 +27,7 @@
 		1484AE222B2F6E7F009D5EBB /* APIEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1484AE212B2F6E7F009D5EBB /* APIEndPoint.swift */; };
 		1484AE242B306559009D5EBB /* Origin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1484AE232B306559009D5EBB /* Origin.swift */; };
 		1484AE262B306661009D5EBB /* SingleLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1484AE252B306661009D5EBB /* SingleLocation.swift */; };
+		1484AE2A2B30A448009D5EBB /* GetAllCharactersResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1484AE292B30A448009D5EBB /* GetAllCharactersResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		1484AE212B2F6E7F009D5EBB /* APIEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndPoint.swift; sourceTree = "<group>"; };
 		1484AE232B306559009D5EBB /* Origin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Origin.swift; sourceTree = "<group>"; };
 		1484AE252B306661009D5EBB /* SingleLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleLocation.swift; sourceTree = "<group>"; };
+		1484AE292B30A448009D5EBB /* GetAllCharactersResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAllCharactersResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,11 +163,8 @@
 		1484AE032B2F58DF009D5EBB /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				1484AE092B2F59C6009D5EBB /* Character.swift */,
-				1484AE0B2B2F59D6009D5EBB /* Location.swift */,
-				1484AE0D2B2F59FB009D5EBB /* Episode.swift */,
-				1484AE232B306559009D5EBB /* Origin.swift */,
-				1484AE252B306661009D5EBB /* SingleLocation.swift */,
+				1484AE282B30A41A009D5EBB /* APIResponseTypes */,
+				1484AE272B30A402009D5EBB /* DataTypes */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -222,6 +221,26 @@
 				1484AE172B2F5B1F009D5EBB /* SettingsViewController.swift */,
 			);
 			path = Core;
+			sourceTree = "<group>";
+		};
+		1484AE272B30A402009D5EBB /* DataTypes */ = {
+			isa = PBXGroup;
+			children = (
+				1484AE092B2F59C6009D5EBB /* Character.swift */,
+				1484AE0B2B2F59D6009D5EBB /* Location.swift */,
+				1484AE0D2B2F59FB009D5EBB /* Episode.swift */,
+				1484AE232B306559009D5EBB /* Origin.swift */,
+				1484AE252B306661009D5EBB /* SingleLocation.swift */,
+			);
+			path = DataTypes;
+			sourceTree = "<group>";
+		};
+		1484AE282B30A41A009D5EBB /* APIResponseTypes */ = {
+			isa = PBXGroup;
+			children = (
+				1484AE292B30A448009D5EBB /* GetAllCharactersResponse.swift */,
+			);
+			path = APIResponseTypes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -355,6 +374,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1484ADD72B2F527D009D5EBB /* TabBarViewControllerTabViewController.swift in Sources */,
+				1484AE2A2B30A448009D5EBB /* GetAllCharactersResponse.swift in Sources */,
 				1484AE0E2B2F59FB009D5EBB /* Episode.swift in Sources */,
 				1484AE122B2F5AE3009D5EBB /* CharacterViewController.swift in Sources */,
 				1484AE182B2F5B1F009D5EBB /* SettingsViewController.swift in Sources */,
