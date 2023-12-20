@@ -31,6 +31,7 @@
 		1484AE2C2B32F26C009D5EBB /* CharacterListViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1484AE2B2B32F26C009D5EBB /* CharacterListViewViewModel.swift */; };
 		1484AE2E2B32F2B5009D5EBB /* CharacterListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1484AE2D2B32F2B5009D5EBB /* CharacterListView.swift */; };
 		1484AE302B32FF54009D5EBB /* CharacterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1484AE2F2B32FF54009D5EBB /* CharacterCollectionViewCell.swift */; };
+		1484AE322B333B87009D5EBB /* SpacerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1484AE312B333B87009D5EBB /* SpacerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +80,7 @@
 		1484AE2B2B32F26C009D5EBB /* CharacterListViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListViewViewModel.swift; sourceTree = "<group>"; };
 		1484AE2D2B32F2B5009D5EBB /* CharacterListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListView.swift; sourceTree = "<group>"; };
 		1484AE2F2B32FF54009D5EBB /* CharacterCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCollectionViewCell.swift; sourceTree = "<group>"; };
+		1484AE312B333B87009D5EBB /* SpacerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpacerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,6 +182,7 @@
 			children = (
 				1484AE2D2B32F2B5009D5EBB /* CharacterListView.swift */,
 				1484AE2F2B32FF54009D5EBB /* CharacterCollectionViewCell.swift */,
+				1484AE312B333B87009D5EBB /* SpacerView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -390,6 +393,7 @@
 				1484AE1E2B2F6DB9009D5EBB /* APIService.swift in Sources */,
 				1484AE222B2F6E7F009D5EBB /* APIEndPoint.swift in Sources */,
 				1484ADD32B2F527D009D5EBB /* AppDelegate.swift in Sources */,
+				1484AE322B333B87009D5EBB /* SpacerView.swift in Sources */,
 				1484AE0C2B2F59D6009D5EBB /* Location.swift in Sources */,
 				1484AE2E2B32F2B5009D5EBB /* CharacterListView.swift in Sources */,
 				1484ADD52B2F527D009D5EBB /* SceneDelegate.swift in Sources */,

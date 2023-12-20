@@ -16,7 +16,8 @@ final class CharacterCollectionViewCell: UICollectionViewCell {
     
     lazy private var imageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.contentMode = .scaleAspectFit
+        imageView.contentMode = .scaleAspectFill
+        imageView.clipsToBounds = true
         
         return imageView
     }()
@@ -26,7 +27,7 @@ final class CharacterCollectionViewCell: UICollectionViewCell {
         label.textColor = .label
         label.font = .systemFont(ofSize: 18, weight: .medium)
         NSLayoutConstraint.activate([
-            label.heightAnchor.constraint(equalToConstant: 40)
+            label.heightAnchor.constraint(equalToConstant: 30)
         ])
         
         return label
@@ -37,7 +38,7 @@ final class CharacterCollectionViewCell: UICollectionViewCell {
         label.textColor = .secondaryLabel
         label.font = .systemFont(ofSize: 16, weight: .regular)
         NSLayoutConstraint.activate([
-            label.heightAnchor.constraint(equalToConstant: 40)
+            label.heightAnchor.constraint(equalToConstant: 30)
         ])
         
         return label
@@ -55,10 +56,21 @@ final class CharacterCollectionViewCell: UICollectionViewCell {
         return stackView
     }()
     
+    lazy private var horizontalStackView: UIStackView = {
+        let stackView = UIStackView(arrangedSubviews: [
+            HorizontalSpacerView(space: 8),
+            nameStatusStackView,
+            HorizontalSpacerView(space: 8)
+        ])
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        
+        return stackView
+    }()
+    
     lazy private var mainView: UIView = {
         let stackView = UIStackView(arrangedSubviews: [
             imageView,
-            nameStatusStackView
+            horizontalStackView
         ])
         stackView.spacing = 3
         stackView.axis = .vertical
@@ -83,7 +95,7 @@ final class CharacterCollectionViewCell: UICollectionViewCell {
         let status: Status
         
         var characterStatusText: String {
-            return status.rawValue
+            return "Status: \(status.text)"
         }
         
         public func fetchImage(completion: @escaping(Result<Data, Error>) -> Void) {
@@ -109,6 +121,7 @@ final class CharacterCollectionViewCell: UICollectionViewCell {
         super.init(frame: frame)
         
         contentView.backgroundColor = .secondarySystemBackground
+        setUpLayer()
         
         addConstraints()
     }
@@ -118,6 +131,11 @@ final class CharacterCollectionViewCell: UICollectionViewCell {
     }
     
     //MARK: - Functions
+    
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
+        setUpLayer()
+    }
     
     private func addConstraints() {
         contentView.addSubview(mainView)
@@ -155,5 +173,12 @@ final class CharacterCollectionViewCell: UICollectionViewCell {
                 break
             }
         }
+    }
+    
+    private func setUpLayer() {
+        contentView.layer.cornerRadius = 8
+        contentView.layer.shadowColor = UIColor.label.cgColor
+        contentView.layer.shadowOffset = CGSize(width: -4, height: 4)
+        contentView.layer.shadowOpacity = 0.3
     }
 }
