@@ -19,6 +19,8 @@ final class CharacterViewController: UIViewController {
         view.backgroundColor = .systemBackground
         title = "Characters"
         
+        characterListView.delegate = self
+        
         setUpView()
     }
     
@@ -34,4 +36,17 @@ final class CharacterViewController: UIViewController {
         ])
     }
 
+}
+
+//MARK: - CharacterListViewDelegate
+
+extension CharacterViewController: CharacterListViewDelegate {
+    
+    func characterListView(_ characteListView: CharacterListView, didSelectCharacter character: Character) {
+        // Open detail controller for character
+        let viewModel = CharacterDetailViewViewModel(character: character)
+        let detailVC = CharacterDetailViewController(viewModel: viewModel)
+        detailVC.navigationItem.largeTitleDisplayMode = .never
+        navigationController?.pushViewController(detailVC, animated: true)
+    }
 }

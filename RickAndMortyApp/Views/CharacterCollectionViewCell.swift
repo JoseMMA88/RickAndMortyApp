@@ -12,7 +12,9 @@ final class CharacterCollectionViewCell: UICollectionViewCell {
     
     //MARK: - Properties
     
-    static let identifier = "CharacterCollectionViewCell"
+    static var identifier: String {
+        String(describing: self)
+    }
     
     lazy private var imageView: UIImageView = {
         let imageView = UIImageView()
@@ -89,7 +91,7 @@ final class CharacterCollectionViewCell: UICollectionViewCell {
     }()
     
     
-    struct Model {
+    struct Model: Hashable, Equatable {
         let name: String
         let imageURL: URL?
         let status: Status
@@ -104,14 +106,20 @@ final class CharacterCollectionViewCell: UICollectionViewCell {
                 return
             }
             
-            let request = URLRequest(url: url)
-            URLSession.shared.dataTask(with: request) { data, _, error in
-                guard let data = data, error == nil else {
-                    completion(.failure(error ?? URLError(.badServerResponse)))
-                    return
-                }
-                completion(.success(data))
-            }.resume()
+            ImageLoader.shared.downloadImage(url, completion: completion)
+        }
+        
+        // MARK: - Hashable
+        
+        static func == (lhs: Model,
+                        rhs: Model) -> Bool {
+            return lhs.hashValue == rhs.hashValue
+        }
+        
+        func hash(into hasher: inout Hasher) {
+            hasher.combine(name)
+            hasher.combine(status)
+            hasher.combine(imageURL)
         }
     }
     

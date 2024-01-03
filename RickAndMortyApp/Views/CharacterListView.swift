@@ -7,10 +7,17 @@
 
 import UIKit
 
+protocol CharacterListViewDelegate: AnyObject {
+    func characterListView(_ characteListView: CharacterListView,
+                           didSelectCharacter character: Character)
+}
+
 /// View thats show collection fo charactes
 final class CharacterListView: UIView {
     
     //MARK: - Properties
+    
+    public weak var delegate: CharacterListViewDelegate?
     
     private let viewModel = CharacterListViewViewModel()
     
@@ -25,12 +32,15 @@ final class CharacterListView: UIView {
     private let collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
-        layout.sectionInset = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
+        layout.sectionInset = UIEdgeInsets(top: 0, left: 10, bottom: 10, right: 10)
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.isHidden = true
         collectionView.alpha = 0
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         collectionView.register(CharacterCollectionViewCell.self, forCellWithReuseIdentifier: CharacterCollectionViewCell.identifier)
+        collectionView.register(FooterLoadingCollectionReusableView.self,
+                                forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter,
+                                withReuseIdentifier: FooterLoadingCollectionReusableView.identifier)
         
         return collectionView
     }()
@@ -81,6 +91,16 @@ final class CharacterListView: UIView {
 //MARK: - CharacterLisViewViewModelDelegate
 
 extension CharacterListView: CharacterListViewViewModelDelegate {
+    func didLoadMoreCharacters(with newIndexPaths: [IndexPath]) {
+        collectionView.performBatchUpdates {
+            self.collectionView.insertItems(at: newIndexPaths)
+        }
+    }
+    
+    func didSelectCharacter(_ character: Character) {
+        delegate?.characterListView(self, didSelectCharacter: character)
+    }
+    
     func didLoadInitialCharacters() {
         spinner.stopAnimating()
         collectionView.reloadData()
