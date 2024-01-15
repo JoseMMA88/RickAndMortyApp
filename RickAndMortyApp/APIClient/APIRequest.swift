@@ -62,6 +62,8 @@ final class APIRequest {
         self.queryParameters = queryParameters
     }
     
+    /// Attempt to create URL:
+    /// - Parameter url: URL to parse
     convenience init?(url: URL) {
         let string = url.absoluteString
         if !string.contains(Constants.baseUrl) {

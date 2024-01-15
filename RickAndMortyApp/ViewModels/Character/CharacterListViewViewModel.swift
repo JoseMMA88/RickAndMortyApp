@@ -10,8 +10,7 @@ import UIKit
 protocol CharacterListViewViewModelDelegate: AnyObject {
     func didLoadInitialCharacters()
     func didLoadMoreCharacters(with newIndexPaths: [IndexPath])
-    func didSelectCharacter(_ character: Character)
-    
+    func didSelectCharacter(_ character: Character)    
 }
 
 /// Handle all Character List View Logic
