@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CharacterPhotoCollectionViewCell: UICollectionViewCell {
+final class CharacterPhotoCollectionViewCell: UICollectionViewCell {
     
     //MARK: - Views
     

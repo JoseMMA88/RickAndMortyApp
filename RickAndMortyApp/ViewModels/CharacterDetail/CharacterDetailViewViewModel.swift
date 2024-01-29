@@ -43,14 +43,14 @@ final class CharacterDetailViewViewModel {
         
         sections = [
             .photo(viewModel: .init(imageURL: characterImageURL)),
-            .information(viewModels: [.init(value: character.status.rawValue, title: "Status"),
-                                      .init(value: character.gender.rawValue, title: "Gender"),
-                                      .init(value: character.type, title: "Type"),
-                                      .init(value: character.species, title: "Species"),
-                                      .init(value: character.origin.name, title: "Origin"),
-                                      .init(value: character.location.name, title: "Location"),
-                                      .init(value: character.created, title: "Created"),
-                                      .init(value: "\(character.episode.count)", title: "Total Episodes")]),
+            .information(viewModels: [.init(type: .status, value: character.status.rawValue),
+                                      .init(type: .gender, value: character.gender.rawValue),
+                                      .init(type: .type, value: character.type),
+                                      .init(type: .species, value: character.species),
+                                      .init(type: .origin, value: character.origin.name),
+                                      .init(type: .location, value: character.location.name),
+                                      .init(type: .created, value: character.created),
+                                      .init(type: .numEpisodes, value: "\(character.episode.count)")]),
             .episodes(viewModels: character.episode.compactMap({ episode in
                 guard let episodeURL = URL(string: episode) else { return nil }
                 return CharacterEpisodeViewCellViewModel(episodeDataURL: episodeURL)
@@ -81,7 +81,7 @@ final class CharacterDetailViewViewModel {
                                                      bottom: 2,
                                                      trailing: 2)
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
-                                                                                          heightDimension: .absolute(150)),
+                                                                                          heightDimension: .absolute(100)),
                                                        subitems: [item, item])
         let collecionLayoutSection =  NSCollectionLayoutSection(group: group)
         
@@ -100,6 +100,7 @@ final class CharacterDetailViewViewModel {
                                                        subitems: [item])
         let collecionLayoutSection =  NSCollectionLayoutSection(group: group)
         collecionLayoutSection.orthogonalScrollingBehavior = .groupPaging
+        
         return collecionLayoutSection
     }
 }

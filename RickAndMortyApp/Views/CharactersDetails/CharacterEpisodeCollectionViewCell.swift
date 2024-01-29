@@ -7,7 +7,8 @@
 
 import UIKit
 
-class CharacterEpisodeCollectionViewCell: UICollectionViewCell {
+final class CharacterEpisodeCollectionViewCell: UICollectionViewCell {
+    
     //MARK: - Properties
     
     static var identifier: String {
@@ -18,6 +19,7 @@ class CharacterEpisodeCollectionViewCell: UICollectionViewCell {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        contentView.backgroundColor = .systemOrange
     }
     
     required init?(coder: NSCoder) {
