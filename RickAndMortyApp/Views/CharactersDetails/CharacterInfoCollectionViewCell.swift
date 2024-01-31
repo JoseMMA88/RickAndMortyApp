@@ -9,7 +9,7 @@ import UIKit
 
 final class CharacterInfoCollectionViewCell: UICollectionViewCell {
     
-    //MARK: - Views
+    // MARK: - Views
     
     lazy var titleLabel: UILabel = {
         let label = UILabel()
@@ -93,13 +93,13 @@ final class CharacterInfoCollectionViewCell: UICollectionViewCell {
         return stackView
     }()
     
-    //MARK: - Properties
+    // MARK: - Properties
     
     static var identifier: String {
         String(describing: self)
     }
     
-    //MARK: - Initializers
+    // MARK: - Initializers
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -113,7 +113,7 @@ final class CharacterInfoCollectionViewCell: UICollectionViewCell {
         return nil
     }
     
-    //MARK: - Configure
+    // MARK: - Configure
     
     public func configure(with viewModel: CharacterInfoViewCellViewModel) {
         titleLabel.text = viewModel.title
@@ -123,7 +123,7 @@ final class CharacterInfoCollectionViewCell: UICollectionViewCell {
         iconImageView.tintColor = viewModel.tintColor
     }
     
-    //MARK: - Functions
+    // MARK: - Functions
     
     override func prepareForReuse() {
         super.prepareForReuse()

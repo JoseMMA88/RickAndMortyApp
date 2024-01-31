@@ -9,9 +9,9 @@ import UIKit
 
 final class CharacterDetailViewViewModel {
     
-    //MARK: - Properties
+    // MARK: - Properties
     
-    //MARK: Sections
+    // MARK: Sections
     enum SectionType {
         case photo(viewModel: CharacterPhotoViewCellViewModel)
         case information(viewModels: [CharacterInfoViewCellViewModel])
@@ -29,14 +29,19 @@ final class CharacterDetailViewViewModel {
         character.name.uppercased()
     }
     
-    //MARK: - Init
+    ///  Array of episodes urls
+    public var episodes: [String] {
+        character.episode
+    }
+    
+    // MARK: - Init
     
     init(character: Character) {
         self.character = character
         setUpSections()
     }
     
-    //MARK: - Functions
+    // MARK: - Functions
     
     private func setUpSections() {
         guard let characterImageURL = URL(string: character.image) else { return }

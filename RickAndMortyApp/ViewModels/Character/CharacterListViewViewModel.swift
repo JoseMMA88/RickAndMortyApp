@@ -100,13 +100,13 @@ final class CharacterListViewViewModel: NSObject {
     }
 }
 
-//MARK: - CollectionViewDelegate
+// MARK: - CollectionViewDelegate
 
 extension CharacterListViewViewModel: UICollectionViewDelegate {
     
 }
 
-//MARK: - CollectionViewDataSource
+// MARK: - CollectionViewDataSource
 
 extension CharacterListViewViewModel: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -158,7 +158,7 @@ extension CharacterListViewViewModel: UICollectionViewDataSource {
     
 }
 
-//MARK: - CollectionViewDelegateFlowLayout
+// MARK: - CollectionViewDelegateFlowLayout
 
 extension CharacterListViewViewModel: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView,
@@ -171,7 +171,7 @@ extension CharacterListViewViewModel: UICollectionViewDelegateFlowLayout {
     }
 }
 
-//MARK: - UIScrolViewDelegate
+// MARK: - UIScrolViewDelegate
 
 extension CharacterListViewViewModel: UIScrollViewDelegate {
     

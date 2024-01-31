@@ -15,7 +15,7 @@ final class APIRequest {
         static let baseUrl = "https://rickandmortyapi.com/api"
     }
     
-    private let endPoint: APIEndPoint
+    public let endPoint: APIEndPoint
     private let pathComponents: [String]
     private let queryParameters: [URLQueryItem]
     

@@ -10,7 +10,7 @@ import UIKit
 
 final class CharacterInfoViewCellViewModel {
     
-    //MARK: - Properties
+    // MARK: - Properties
     
     /// static because date formatter initilization is expensive
     static let dateFormatter: DateFormatter = {
@@ -112,22 +112,17 @@ final class CharacterInfoViewCellViewModel {
         
         var titleString: String {
             switch self {
-            case .status,
-                 .gender,
-                 .type,
-                 .species,
-                 .origin,
-                 .location:
-                return rawValue.uppercased()
             case .created:
                 return "BIRTH DATE"
             case .numEpisodes:
                 return "EPISODES COUNT"
+            default:
+                return rawValue.uppercased()
             }
         }
     }
     
-    //MARK: - Init
+    // MARK: - Init
     
     init(type: `Type`, value: String) {
         self.type = type

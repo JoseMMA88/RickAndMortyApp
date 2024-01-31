@@ -9,17 +9,17 @@ import Foundation
 
 final class CharacterPhotoViewCellViewModel {
     
-    //MARK: - Properties
+    // MARK: - Properties
     
     private let imageURL: URL?
     
-    //MARK: - Init
+    // MARK: - Init
     
     init(imageURL: URL) {
         self.imageURL = imageURL
     }
     
-    //MARK: - Functions
+    // MARK: - Functions
     
     public func fetchImage(completion: @escaping(Result<Data, Error>) -> Void) {
         guard let url = imageURL else {

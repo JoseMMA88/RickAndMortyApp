@@ -9,13 +9,13 @@ import UIKit
 
 final class FooterLoadingCollectionReusableView: UICollectionReusableView {
     
-    //MARK: - Properties
+    // MARK: - Properties
     
     static var identifier: String {
         String(describing: self)
     }
     
-    //MARK: - Views
+    // MARK: - Views
     
     private let spinner: UIActivityIndicatorView = {
         let spinner = UIActivityIndicatorView(style: .large)
@@ -25,7 +25,7 @@ final class FooterLoadingCollectionReusableView: UICollectionReusableView {
         return spinner
     }()
     
-    //MARK: - Init
+    // MARK: - Init
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -37,7 +37,7 @@ final class FooterLoadingCollectionReusableView: UICollectionReusableView {
         return nil
     }
     
-    //MARK: - Functions
+    // MARK: - Functions
     
     private func addConstraints() {
         NSLayoutConstraint.activate([

@@ -10,12 +10,12 @@ import UIKit
 /// View for single character information
 final class CharacterDetailView: UIView {
     
-    //MARK: - Properties
+    // MARK: - Properties
     
     public var collectionView: UICollectionView?
     private let viewModel: CharacterDetailViewViewModel
     
-    //MARK: - Views
+    // MARK: - Views
     
     private let spinner: UIActivityIndicatorView = {
         let spinner = UIActivityIndicatorView(style: .large)
@@ -25,7 +25,7 @@ final class CharacterDetailView: UIView {
         return spinner
     }()
 
-    //MARK: - Initializer
+    // MARK: - Initializer
     
     init(frame: CGRect, viewModel: CharacterDetailViewViewModel) {
         self.viewModel = viewModel
@@ -43,7 +43,7 @@ final class CharacterDetailView: UIView {
         return nil
     }
     
-    //MARK: - Function
+    // MARK: - Function
     
     private func addConstraints() {
         guard let collectionView = collectionView else { return }

@@ -10,13 +10,13 @@ import UIKit
 /// Controller to show character extra information
 final class CharacterDetailViewController: UIViewController {
     
-    //MARK: - Properties
+    // MARK: - Properties
     
     private let viewModel: CharacterDetailViewViewModel
     
     private let detailView: CharacterDetailView
     
-    //MARK: - Initializers
+    // MARK: - Initializers
     
     init(viewModel: CharacterDetailViewViewModel){
         self.viewModel = viewModel
@@ -30,7 +30,7 @@ final class CharacterDetailViewController: UIViewController {
         nil
     }
     
-    //MARK: - Lifecycle
+    // MARK: - Lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,7 +45,7 @@ final class CharacterDetailViewController: UIViewController {
         detailView.collectionView?.dataSource = self
     }
     
-    //MARK: - Functions
+    // MARK: - Functions
     
     private func setUpView() {
         view.addSubview(detailView)
@@ -63,7 +63,7 @@ final class CharacterDetailViewController: UIViewController {
 
 }
 
-//MARK: - UICollectionViewDelegate and UICollectionViewDataSource
+// MARK: - UICollectionViewDelegate and UICollectionViewDataSource
 
 extension CharacterDetailViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     
@@ -112,6 +112,21 @@ extension CharacterDetailViewController: UICollectionViewDelegate, UICollectionV
             cell.configure(with: viewModels[indexPath.row])
             
             return cell
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let sectionType = viewModel.sections[indexPath.section]
+        
+        switch sectionType {
+        case .episodes:
+            let episodeURL = viewModel.episodes[indexPath.row]
+            guard let url = URL(string: episodeURL) else { return }
+            
+            let vc = EpisodeDetailViewController(url: url)
+            navigationController?.pushViewController(vc, animated: true)
+        default:
+            break
         }
     }
 }

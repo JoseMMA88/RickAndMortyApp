@@ -10,7 +10,7 @@ import UIKit
 /// Controller to show and search for characters
 final class CharacterViewController: UIViewController {
     
-    //MARK: - Properties
+    // MARK: - Properties
     
     private let characterListView = CharacterListView()
 
@@ -24,7 +24,7 @@ final class CharacterViewController: UIViewController {
         setUpView()
     }
     
-    //MARK: - Functions
+    // MARK: - Functions
     
     private func setUpView() {
         view.addSubview(characterListView)
@@ -38,7 +38,7 @@ final class CharacterViewController: UIViewController {
 
 }
 
-//MARK: - CharacterListViewDelegate
+// MARK: - CharacterListViewDelegate
 
 extension CharacterViewController: CharacterListViewDelegate {
     

@@ -15,7 +15,7 @@ protocol CharacterListViewDelegate: AnyObject {
 /// View thats show collection fo charactes
 final class CharacterListView: UIView {
     
-    //MARK: - Properties
+    // MARK: - Properties
     
     public weak var delegate: CharacterListViewDelegate?
     
@@ -45,7 +45,7 @@ final class CharacterListView: UIView {
         return collectionView
     }()
     
-    //MARK: - Init
+    // MARK: - Init
  
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -65,7 +65,7 @@ final class CharacterListView: UIView {
         return nil
     }
     
-    //MARK: - Functions
+    // MARK: - Functions
     
     private func addConstraints() {
         NSLayoutConstraint.activate([
@@ -88,7 +88,7 @@ final class CharacterListView: UIView {
     
 }
 
-//MARK: - CharacterLisViewViewModelDelegate
+// MARK: - CharacterLisViewViewModelDelegate
 
 extension CharacterListView: CharacterListViewViewModelDelegate {
     func didLoadMoreCharacters(with newIndexPaths: [IndexPath]) {

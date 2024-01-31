@@ -8,7 +8,7 @@
 import Foundation
 
 /// Unique API endpoints
-enum APIEndPoint: String {
+enum APIEndPoint: String, CaseIterable {
     case character
     case location
     case episode

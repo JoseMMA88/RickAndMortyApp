@@ -9,7 +9,7 @@ import UIKit
 
 final class CharacterPhotoCollectionViewCell: UICollectionViewCell {
     
-    //MARK: - Views
+    // MARK: - Views
     
     lazy private var imageView: UIImageView = {
         let imageView = UIImageView()
@@ -20,13 +20,13 @@ final class CharacterPhotoCollectionViewCell: UICollectionViewCell {
         return imageView
     }()
     
-    //MARK: - Properties
+    // MARK: - Properties
     
     static var identifier: String {
         String(describing: self)
     }
     
-    //MARK: - Initializers
+    // MARK: - Initializers
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -38,7 +38,7 @@ final class CharacterPhotoCollectionViewCell: UICollectionViewCell {
         return nil
     }
     
-    //MARK: - Configure
+    // MARK: - Configure
     
     public func configure(with viewModel: CharacterPhotoViewCellViewModel) {
         viewModel.fetchImage { [weak self]  result in
@@ -57,7 +57,7 @@ final class CharacterPhotoCollectionViewCell: UICollectionViewCell {
         }
     }
     
-    //MARK: - Functions
+    // MARK: - Functions
     
     override func prepareForReuse() {
         super.prepareForReuse()

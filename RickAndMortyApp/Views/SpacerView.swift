@@ -11,7 +11,7 @@ import UIKit
 /// Vertical separator view
 class VerticalSpacerView: UIView {
     
-    //MARK: - Initializer
+    // MARK: - Initializer
     
     init(space: CGFloat, frame: CGRect = .zero) {
         super.init(frame: frame)
@@ -29,7 +29,7 @@ class VerticalSpacerView: UIView {
 /// Horizontal separator view
 class HorizontalSpacerView: UIView {
     
-    //MARK: - Initializer
+    // MARK: - Initializer
     
     init(space: CGFloat, frame: CGRect = .zero) {
         super.init(frame: frame)

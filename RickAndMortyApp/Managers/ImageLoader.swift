@@ -9,19 +9,19 @@ import Foundation
 
 final class ImageLoader {
     
-    //MARK: - Singleton
+    // MARK: - Singleton
     
     static let shared = ImageLoader()
     
-    //MARK: - Properties
+    // MARK: - Properties
     
     private var imageDataCache = NSCache<NSString, NSData>()
     
-    //MARK: - Init
+    // MARK: - Init
     
     private init() {}
     
-    //MARK: - Functions
+    // MARK: - Functions
     
     /// Get Image content with URL
     /// - Parameters:

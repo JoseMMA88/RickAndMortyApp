@@ -9,16 +9,28 @@ import Foundation
 
 /// APIService object to get Rick and Morty data
 final class APIService {
-    /// Singleton
-    static let share = APIService()
-     
-    private init() {}
+    
+    // MARK: - Enums
     
     /// Service error types
     enum ServiceError: Error {
         case failedToCreateRequest
         case failedToGetData
     }
+    
+    // MARK: - Propeties
+    
+    /// Singleton
+    static let share = APIService()
+    
+    private let cacheManager = APICacheManager()
+    
+    // MARK: - Init
+    
+    private init() {}
+    
+    
+    // MARK: - Functions
     
     /// Send API Call
     /// - Parameters:
@@ -28,21 +40,36 @@ final class APIService {
     public func execute<T: Codable>(_ request: APIRequest,
                                     expecting type: T.Type,
                                     completion: @escaping (Result<T, Error>) -> Void) {
+        
+        if let cacheData = cacheManager.cacheResponse(for: request.endPoint,
+                                                      url: request.url) {
+            do {
+                let result = try JSONDecoder().decode(type.self, from: cacheData)
+                completion(.success(result))
+            } catch {
+                completion(.failure(error))
+            }
+            return
+        }
+        
         guard let urlRequest = self.request(from: request) else {
             completion(.failure(ServiceError.failedToCreateRequest))
             return
         }
         
-        URLSession.shared.dataTask(with: urlRequest) { data, _, error in
+        URLSession.shared.dataTask(with: urlRequest) { [weak self] data, _, error in
+            guard let self = self else { return }
             guard let data = data, error == nil else {
                 completion(.failure(error ?? ServiceError.failedToGetData))
                 return
             }
             
-            // Docede data
+            // Decode data
             do {
                 let result = try JSONDecoder().decode(type.self, from: data)
-                print(String(describing: data))
+                self.cacheManager.setCache(for: request.endPoint,
+                                      url: request.url,
+                                      data: data)
                 completion(.success(result))
             } catch {
                 completion(.failure(error))
@@ -52,7 +79,7 @@ final class APIService {
         
     }
     
-    //MARK: - Private functions
+    // MARK: - Private functions
     
     private func request(from apiRequest: APIRequest) -> URLRequest? {
         guard let url = apiRequest.url else { return nil }

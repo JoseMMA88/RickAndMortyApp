@@ -10,7 +10,7 @@ import UIKit
 /// Shows Character data
 final class CharacterCollectionViewCell: UICollectionViewCell {
     
-    //MARK: - Properties
+    // MARK: - Properties
     
     static var identifier: String {
         String(describing: self)
@@ -123,7 +123,7 @@ final class CharacterCollectionViewCell: UICollectionViewCell {
         }
     }
     
-    //MARK: - Init
+    // MARK: - Init
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -138,7 +138,7 @@ final class CharacterCollectionViewCell: UICollectionViewCell {
         return nil
     }
     
-    //MARK: - Functions
+    // MARK: - Functions
     
     override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
         super.traitCollectionDidChange(previousTraitCollection)
