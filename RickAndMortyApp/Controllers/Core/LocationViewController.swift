@@ -15,6 +15,18 @@ final class LocationViewController: UIViewController {
 
         view.backgroundColor = .white
         title = "Location"
+        addSearchButton()
+    }
+    
+    private func addSearchButton() {
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .search,
+                                                            target: self,
+                                                            action: #selector(didTapSearchButton))
+    }
+    
+    @objc
+    private func didTapSearchButton() {
+        
     }
 
 }

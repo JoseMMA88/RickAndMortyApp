@@ -22,6 +22,7 @@ final class CharacterViewController: UIViewController {
         characterListView.delegate = self
         
         setUpView()
+        addSearchButton()
     }
     
     // MARK: - Functions
@@ -34,6 +35,19 @@ final class CharacterViewController: UIViewController {
             characterListView.rightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor),
             characterListView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
         ])
+    }
+    
+    private func addSearchButton() {
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .search,
+                                                            target: self,
+                                                            action: #selector(didTapSearchButton))
+    }
+    
+    @objc
+    private func didTapSearchButton() {
+        let vc = GlobalSearchViewController(config: .init(type: .character))
+        vc.navigationItem.largeTitleDisplayMode = .never
+        navigationController?.pushViewController(vc, animated: true)
     }
 
 }

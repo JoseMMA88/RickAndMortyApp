@@ -25,6 +25,21 @@
 		1428C00B2B6A73600033D4F6 /* EpisodeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1428C00A2B6A73600033D4F6 /* EpisodeDetailView.swift */; };
 		1428C00C2B6A73600033D4F6 /* EpisodeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1428C00A2B6A73600033D4F6 /* EpisodeDetailView.swift */; };
 		1428C00D2B6A73600033D4F6 /* EpisodeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1428C00A2B6A73600033D4F6 /* EpisodeDetailView.swift */; };
+		1428C0102B6A9D6E0033D4F6 /* EpisodeListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1428C00F2B6A9D6E0033D4F6 /* EpisodeListView.swift */; };
+		1428C0112B6A9D6E0033D4F6 /* EpisodeListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1428C00F2B6A9D6E0033D4F6 /* EpisodeListView.swift */; };
+		1428C0122B6A9D6E0033D4F6 /* EpisodeListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1428C00F2B6A9D6E0033D4F6 /* EpisodeListView.swift */; };
+		1428C0152B6AA0900033D4F6 /* EpisodeListViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1428C0142B6AA0900033D4F6 /* EpisodeListViewViewModel.swift */; };
+		1428C0162B6AA0900033D4F6 /* EpisodeListViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1428C0142B6AA0900033D4F6 /* EpisodeListViewViewModel.swift */; };
+		1428C0172B6AA0900033D4F6 /* EpisodeListViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1428C0142B6AA0900033D4F6 /* EpisodeListViewViewModel.swift */; };
+		1428C0192B6AA2E50033D4F6 /* GetAllEpisodesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1428C0182B6AA2E50033D4F6 /* GetAllEpisodesResponse.swift */; };
+		1428C01A2B6AA2E50033D4F6 /* GetAllEpisodesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1428C0182B6AA2E50033D4F6 /* GetAllEpisodesResponse.swift */; };
+		1428C01B2B6AA2E50033D4F6 /* GetAllEpisodesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1428C0182B6AA2E50033D4F6 /* GetAllEpisodesResponse.swift */; };
+		146A4AFA2B6CF71F00E78C62 /* GlobalSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146A4AF92B6CF71F00E78C62 /* GlobalSearchViewController.swift */; };
+		146A4AFB2B6CF71F00E78C62 /* GlobalSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146A4AF92B6CF71F00E78C62 /* GlobalSearchViewController.swift */; };
+		146A4AFC2B6CF71F00E78C62 /* GlobalSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146A4AF92B6CF71F00E78C62 /* GlobalSearchViewController.swift */; };
+		146A4AFE2B74F50300E78C62 /* EpisodeInfoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146A4AFD2B74F50300E78C62 /* EpisodeInfoCollectionViewCell.swift */; };
+		146A4AFF2B74F50300E78C62 /* EpisodeInfoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146A4AFD2B74F50300E78C62 /* EpisodeInfoCollectionViewCell.swift */; };
+		146A4B002B74F50300E78C62 /* EpisodeInfoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146A4AFD2B74F50300E78C62 /* EpisodeInfoCollectionViewCell.swift */; };
 		1484ADD32B2F527D009D5EBB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1484ADD22B2F527D009D5EBB /* AppDelegate.swift */; };
 		1484ADD52B2F527D009D5EBB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1484ADD42B2F527D009D5EBB /* SceneDelegate.swift */; };
 		1484ADD72B2F527D009D5EBB /* TabBarViewControllerTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1484ADD62B2F527D009D5EBB /* TabBarViewControllerTabViewController.swift */; };
@@ -85,6 +100,11 @@
 		1428C0002B6A69B80033D4F6 /* APICacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICacheManager.swift; sourceTree = "<group>"; };
 		1428C0042B6A72700033D4F6 /* EpisodeDetailViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeDetailViewViewModel.swift; sourceTree = "<group>"; };
 		1428C00A2B6A73600033D4F6 /* EpisodeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeDetailView.swift; sourceTree = "<group>"; };
+		1428C00F2B6A9D6E0033D4F6 /* EpisodeListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeListView.swift; sourceTree = "<group>"; };
+		1428C0142B6AA0900033D4F6 /* EpisodeListViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeListViewViewModel.swift; sourceTree = "<group>"; };
+		1428C0182B6AA2E50033D4F6 /* GetAllEpisodesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAllEpisodesResponse.swift; sourceTree = "<group>"; };
+		146A4AF92B6CF71F00E78C62 /* GlobalSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalSearchViewController.swift; sourceTree = "<group>"; };
+		146A4AFD2B74F50300E78C62 /* EpisodeInfoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeInfoCollectionViewCell.swift; sourceTree = "<group>"; };
 		1484ADCF2B2F527D009D5EBB /* RickAndMortyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RickAndMortyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1484ADD22B2F527D009D5EBB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1484ADD42B2F527D009D5EBB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -160,6 +180,7 @@
 		1428BFED2B5404980033D4F6 /* Character */ = {
 			isa = PBXGroup;
 			children = (
+				1428BFEB2B5404630033D4F6 /* CharactersDetails */,
 				1484AE2D2B32F2B5009D5EBB /* CharacterListView.swift */,
 				1484AE2F2B32FF54009D5EBB /* CharacterCollectionViewCell.swift */,
 			);
@@ -180,6 +201,7 @@
 		1428BFF52B5406ED0033D4F6 /* Character */ = {
 			isa = PBXGroup;
 			children = (
+				1428BFF42B5406D20033D4F6 /* CharacterDetail */,
 				1484AE2B2B32F26C009D5EBB /* CharacterListViewViewModel.swift */,
 			);
 			path = Character;
@@ -197,8 +219,27 @@
 			isa = PBXGroup;
 			children = (
 				1428C00A2B6A73600033D4F6 /* EpisodeDetailView.swift */,
+				146A4AFD2B74F50300E78C62 /* EpisodeInfoCollectionViewCell.swift */,
 			);
 			path = EpisodeDetail;
+			sourceTree = "<group>";
+		};
+		1428C00E2B6A9D5B0033D4F6 /* Episode */ = {
+			isa = PBXGroup;
+			children = (
+				1428C0092B6A73460033D4F6 /* EpisodeDetail */,
+				1428C00F2B6A9D6E0033D4F6 /* EpisodeListView.swift */,
+			);
+			path = Episode;
+			sourceTree = "<group>";
+		};
+		1428C0132B6AA06C0033D4F6 /* Episode */ = {
+			isa = PBXGroup;
+			children = (
+				1428C0082B6A728C0033D4F6 /* EpisodeDetail */,
+				1428C0142B6AA0900033D4F6 /* EpisodeListViewViewModel.swift */,
+			);
+			path = Episode;
 			sourceTree = "<group>";
 		};
 		1484ADC62B2F527D009D5EBB = {
@@ -274,8 +315,7 @@
 		1484AE042B2F58E9009D5EBB /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				1428C0092B6A73460033D4F6 /* EpisodeDetail */,
-				1428BFEB2B5404630033D4F6 /* CharactersDetails */,
+				1428C00E2B6A9D5B0033D4F6 /* Episode */,
 				1428BFED2B5404980033D4F6 /* Character */,
 				1484AE312B333B87009D5EBB /* SpacerView.swift */,
 				1484AE3A2B442E9E009D5EBB /* FooterLoadingCollectionReusableView.swift */,
@@ -286,9 +326,8 @@
 		1484AE052B2F58FA009D5EBB /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				1428C0082B6A728C0033D4F6 /* EpisodeDetail */,
+				1428C0132B6AA06C0033D4F6 /* Episode */,
 				1428BFF52B5406ED0033D4F6 /* Character */,
-				1428BFF42B5406D20033D4F6 /* CharacterDetail */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -351,6 +390,7 @@
 			isa = PBXGroup;
 			children = (
 				1484AE292B30A448009D5EBB /* GetAllCharactersResponse.swift */,
+				1428C0182B6AA2E50033D4F6 /* GetAllEpisodesResponse.swift */,
 			);
 			path = APIResponseTypes;
 			sourceTree = "<group>";
@@ -360,6 +400,7 @@
 			children = (
 				1484AE342B442409009D5EBB /* CharacterDetailViewController.swift */,
 				1428BFFC2B691C4F0033D4F6 /* EpisodeDetailViewController.swift */,
+				146A4AF92B6CF71F00E78C62 /* GlobalSearchViewController.swift */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -511,21 +552,26 @@
 				1484AE222B2F6E7F009D5EBB /* APIEndPoint.swift in Sources */,
 				1484ADD32B2F527D009D5EBB /* AppDelegate.swift in Sources */,
 				1484AE322B333B87009D5EBB /* SpacerView.swift in Sources */,
+				1428C0152B6AA0900033D4F6 /* EpisodeListViewViewModel.swift in Sources */,
+				146A4AFE2B74F50300E78C62 /* EpisodeInfoCollectionViewCell.swift in Sources */,
 				1484AE0C2B2F59D6009D5EBB /* Location.swift in Sources */,
 				1484AE2E2B32F2B5009D5EBB /* CharacterListView.swift in Sources */,
 				1484ADD52B2F527D009D5EBB /* SceneDelegate.swift in Sources */,
 				1484AE302B32FF54009D5EBB /* CharacterCollectionViewCell.swift in Sources */,
 				1484AE162B2F5B07009D5EBB /* LocationViewController.swift in Sources */,
+				146A4AFA2B6CF71F00E78C62 /* GlobalSearchViewController.swift in Sources */,
 				1484AE142B2F5AF0009D5EBB /* EpisodeViewController.swift in Sources */,
 				1428BFF72B54071F0033D4F6 /* CharacterPhotoViewCellViewModel.swift in Sources */,
 				1484AE202B2F6DCC009D5EBB /* APIRequest.swift in Sources */,
 				1484AE3B2B442E9E009D5EBB /* FooterLoadingCollectionReusableView.swift in Sources */,
 				1484AE0A2B2F59C6009D5EBB /* Character.swift in Sources */,
 				1484AE3F2B45787B009D5EBB /* ImageLoader.swift in Sources */,
+				1428C0192B6AA2E50033D4F6 /* GetAllEpisodesResponse.swift in Sources */,
 				1484AE2C2B32F26C009D5EBB /* CharacterListViewViewModel.swift in Sources */,
 				1428BFFB2B5407410033D4F6 /* CharacterEpisodeViewCellViewModel.swift in Sources */,
 				1428C0012B6A69B80033D4F6 /* APICacheManager.swift in Sources */,
 				1428BFF32B54050D0033D4F6 /* CharacterEpisodeCollectionViewCell.swift in Sources */,
+				1428C0102B6A9D6E0033D4F6 /* EpisodeListView.swift in Sources */,
 				1428BFF12B5404F40033D4F6 /* CharacterInfoCollectionViewCell.swift in Sources */,
 				1484AE242B306559009D5EBB /* Origin.swift in Sources */,
 				1484AE262B306661009D5EBB /* SingleLocation.swift in Sources */,
@@ -537,10 +583,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				1428C0062B6A72700033D4F6 /* EpisodeDetailViewViewModel.swift in Sources */,
+				1428C0162B6AA0900033D4F6 /* EpisodeListViewViewModel.swift in Sources */,
 				1484ADEA2B2F527E009D5EBB /* RickAndMortyAppTests.swift in Sources */,
+				1428C01A2B6AA2E50033D4F6 /* GetAllEpisodesResponse.swift in Sources */,
+				1428C0112B6A9D6E0033D4F6 /* EpisodeListView.swift in Sources */,
 				1428C0022B6A69B80033D4F6 /* APICacheManager.swift in Sources */,
 				1428C00C2B6A73600033D4F6 /* EpisodeDetailView.swift in Sources */,
 				1428BFFE2B691C4F0033D4F6 /* EpisodeDetailViewController.swift in Sources */,
+				146A4AFF2B74F50300E78C62 /* EpisodeInfoCollectionViewCell.swift in Sources */,
+				146A4AFB2B6CF71F00E78C62 /* GlobalSearchViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -551,8 +602,13 @@
 				1428C0032B6A69B80033D4F6 /* APICacheManager.swift in Sources */,
 				1484ADF42B2F527E009D5EBB /* RickAndMortyAppUITests.swift in Sources */,
 				1428C0072B6A72700033D4F6 /* EpisodeDetailViewViewModel.swift in Sources */,
+				1428C0122B6A9D6E0033D4F6 /* EpisodeListView.swift in Sources */,
 				1428C00D2B6A73600033D4F6 /* EpisodeDetailView.swift in Sources */,
+				1428C0172B6AA0900033D4F6 /* EpisodeListViewViewModel.swift in Sources */,
+				146A4B002B74F50300E78C62 /* EpisodeInfoCollectionViewCell.swift in Sources */,
 				1428BFFF2B691C4F0033D4F6 /* EpisodeDetailViewController.swift in Sources */,
+				1428C01B2B6AA2E50033D4F6 /* GetAllEpisodesResponse.swift in Sources */,
+				146A4AFC2B6CF71F00E78C62 /* GlobalSearchViewController.swift in Sources */,
 				1484ADF62B2F527E009D5EBB /* RickAndMortyAppUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

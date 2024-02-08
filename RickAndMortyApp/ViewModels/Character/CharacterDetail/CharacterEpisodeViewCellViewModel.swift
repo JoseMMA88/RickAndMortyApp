@@ -5,7 +5,7 @@
 //  Created by Jose Manuel Malagón Alba on 14/1/24.
 //
 
-import Foundation
+import UIKit
 
 protocol EpisodeDataRender {
     var episode: String { get }
@@ -17,6 +17,7 @@ final class CharacterEpisodeViewCellViewModel {
     
     // MARK: - Properties
     
+    public let borderColor: UIColor
     private let episodeDataURL: URL?
     private var isFetching = false
     private var dataBlock: ((EpisodeDataRender) -> Void)?
@@ -29,8 +30,9 @@ final class CharacterEpisodeViewCellViewModel {
     
     // MARK: - Init
     
-    init(episodeDataURL: URL) {
+    init(episodeDataURL: URL, borderColor: UIColor = .systemBlue) {
         self.episodeDataURL = episodeDataURL
+        self.borderColor = borderColor
     }
     
     // MARK: - Functions
@@ -62,5 +64,17 @@ final class CharacterEpisodeViewCellViewModel {
                 print(String(describing: error))
             }
         }
+    }
+}
+
+// MARK: - Hashable && Equatable Protocols
+
+extension CharacterEpisodeViewCellViewModel: Hashable, Equatable {
+    static func == (lhs: CharacterEpisodeViewCellViewModel, rhs: CharacterEpisodeViewCellViewModel) -> Bool {
+        return lhs.hashValue == rhs.hashValue
+    }
+    
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(episodeDataURL?.absoluteString ?? "")
     }
 }

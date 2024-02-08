@@ -13,6 +13,7 @@ final class EpisodeDetailViewController: UIViewController {
     // MARK: - Properties
     
     private let viewModel: EpisodeDetailViewViewModel
+    private let detailView = EpisodeDetailView()
     
     // MARK: - Initializer
     
@@ -30,8 +31,50 @@ final class EpisodeDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Episode"
-        view.backgroundColor = .systemCyan
+        view.addSubview(detailView)
+        setUpConstraints()
+        title = viewModel.title
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action,
+                                                            target: self,
+                                                            action: #selector(didTapShareButton))
+        
+        viewModel.delegate = self
+        detailView.delegate = self
+        viewModel.fetchEpisode()
+    }
+    
+    // MARK: - Functions
+    
+    private func setUpConstraints() {
+        NSLayoutConstraint.activate([
+            detailView.leftAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leftAnchor),
+            detailView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            detailView.rightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor),
+            detailView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
+        ])
+    }
+    
+    @objc private func didTapShareButton() {
+        // TODO: Share character info
     }
 
+}
+
+// MARK: - EpisodeDetailViewViewModelDelegate
+
+extension EpisodeDetailViewController: EpisodeDetailViewViewModelDelegate {
+    func didFetchEpisodeDetails() {
+        detailView.configure(with: viewModel)
+    }
+}
+
+// MARK: - EpisodeDetailViewDelegate
+
+extension EpisodeDetailViewController: EpisodeDetailViewDelegate {
+    func didSelectCharacter(_ detailView: EpisodeDetailView, character: Character) {
+        let vc = CharacterDetailViewController(viewModel: .init(character: character))
+        vc.title = character.name
+        vc.navigationItem.largeTitleDisplayMode = .never
+        navigationController?.pushViewController(vc, animated: true)
+    }
 }
