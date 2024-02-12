@@ -5,6 +5,8 @@
 //  Created by Jose Manuel Malagón Alba on 17/12/23.
 //
 
+import StoreKit
+import SafariServices
 import SwiftUI
 import UIKit
 
@@ -12,15 +14,7 @@ import UIKit
 final class SettingsViewController: UIViewController {
     // MARK: - Properties
     
-    private let settingsSwiftUIController = UIHostingController(
-        rootView: SettingsView(
-            viewModel: SettingsViewViewModel(
-                cellViewModels: SettingsOption.allCases.compactMap({
-                    return .init(type: $0)
-                })
-            )
-        )
-    )
+    private var settingsSwiftUIController: UIHostingController<SettingsView>?
 
     // MARK: - Life cycle
     
@@ -35,6 +29,19 @@ final class SettingsViewController: UIViewController {
     // MARK: - Functions
     
     private func addSwiftUIController() {
+        let settingsSwiftUIController = UIHostingController(
+            rootView: SettingsView(
+                viewModel: SettingsViewViewModel(
+                    cellViewModels: SettingsOption.allCases.compactMap({
+                        return .init(type: $0) { [weak self] option in
+                            guard let self = self else { return }
+                            self.handleAction(option: option)
+                        }
+                    })
+                )
+            )
+        )
+        
         addChild(settingsSwiftUIController)
         settingsSwiftUIController.didMove(toParent: self)
         
@@ -47,6 +54,23 @@ final class SettingsViewController: UIViewController {
             settingsSwiftUIController.view.rightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor),
             settingsSwiftUIController.view.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
         ])
+        
+        self.settingsSwiftUIController = settingsSwiftUIController
+    }
+    
+    private func handleAction(option: SettingsOption) {
+        guard Thread.current.isMainThread else { return }
+        
+        if let url = option.targetUrl {
+            // Open website
+            let vc = SFSafariViewController(url: url)
+            present(vc, animated: true)
+        } else if option == .rateApp {
+            // Show rating prompt
+            if let windowScene = view.window?.windowScene {
+                SKStoreReviewController.requestReview(in: windowScene')
+            }
+        }
     }
 
 }

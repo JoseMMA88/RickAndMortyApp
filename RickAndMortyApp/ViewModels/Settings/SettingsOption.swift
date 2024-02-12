@@ -22,6 +22,25 @@ enum SettingsOption: CaseIterable {
     
     // MARK: - Properties
     
+    var targetUrl: URL? {
+        switch self {
+        case .rateApp:
+            return nil
+        case .contactUs:
+            return URL(string: "https://josemalagon.es/contact/")
+        case .terms:
+            return URL(string: "https://josemalagon.es")
+        case .privacy:
+            return URL(string: "https://josemalagon.es")
+        case .apiReference:
+            return URL(string: "https://rickandmortyapi.com")
+        case .viewSeries:
+            return URL(string: "https://www.hbomax.com")
+        case .viewCode:
+            return URL(string: "https://github.com/JoseMMA88/RickAndMortyApp")
+        }
+    }
+    
     var displayTitle: String {
         switch self {
         case .rateApp:
@@ -35,7 +54,7 @@ enum SettingsOption: CaseIterable {
         case .apiReference:
             return "API Reference"
         case .viewSeries:
-            return "View Series at Netflix"
+            return "View Series at HBO"
         case .viewCode:
             return "View App Code"
         }

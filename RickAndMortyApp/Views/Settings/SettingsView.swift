@@ -13,8 +13,6 @@ struct SettingsView: View {
     
     let viewModel: SettingsViewViewModel
     
-    let strings = ["A", "B", "C", "D", "E", "F"]
-    
     // MARK: - Views
     
     var body: some View {
@@ -33,8 +31,13 @@ struct SettingsView: View {
                 }
                 Text(viewModel.title)
                     .padding(.leading, 10)
+                
+                Spacer()
             }
             .padding(.bottom, 3)
+            .onTapGesture {
+                viewModel.action(viewModel.type)
+            }
         }
     }
     
@@ -48,6 +51,8 @@ struct SettingsView: View {
 
 #Preview {
     SettingsView(viewModel: .init(cellViewModels: SettingsOption.allCases.compactMap({
-        return .init(type: $0)
+        return .init(type: $0) { option in
+            
+        }
     })))
 }

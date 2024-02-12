@@ -7,7 +7,7 @@
 
 import UIKit
 
-struct SettingsCellViewModel: Identifiable, Hashable {
+struct SettingsCellViewModel: Identifiable {
     
     // MARK: - Properties
     
@@ -25,12 +25,14 @@ struct SettingsCellViewModel: Identifiable, Hashable {
         return type.iconContainerColor
     }
     
-    private let type: SettingsOption
+    public let type: SettingsOption
+    public let action: (SettingsOption) -> Void
     
     // MARK: - Initializers
     
-    init(type: SettingsOption) {
+    init(type: SettingsOption, action: @escaping (SettingsOption) -> Void) {
         self.type = type
+        self.action = action
     }
     
 }
