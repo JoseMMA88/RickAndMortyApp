@@ -58,6 +58,7 @@ class LocationTableViewCell: UITableViewCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         contentView.addSubview(mainStackView)
+        backgroundColor = .secondarySystemBackground
         accessoryType = .disclosureIndicator
         addConstraints()
     }

@@ -31,6 +31,7 @@ final class EpisodeDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .systemBackground
         view.addSubview(detailView)
         setUpConstraints()
         title = viewModel.title

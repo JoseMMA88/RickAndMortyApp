@@ -13,7 +13,6 @@ final class CharacterEpisodeCollectionViewCell: UICollectionViewCell {
     
     lazy var seasonLabel: UILabel = {
         let label = UILabel()
-        label.textColor = .white
         label.font = .systemFont(ofSize: 20, weight: .regular)
         
         return label
@@ -21,7 +20,6 @@ final class CharacterEpisodeCollectionViewCell: UICollectionViewCell {
     
     lazy var nameLabel: UILabel = {
         let label = UILabel()
-        label.textColor = .white
         label.font = .systemFont(ofSize: 22, weight: .semibold)
         
         return label
@@ -29,7 +27,7 @@ final class CharacterEpisodeCollectionViewCell: UICollectionViewCell {
     
     lazy var airDateLabel: UILabel = {
         let label = UILabel()
-        label.textColor = .white
+        label.textColor = .secondaryLabel
         label.font = .systemFont(ofSize: 18, weight: .light)
         
         return label
